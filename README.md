@@ -75,8 +75,15 @@ ilmari_: rm the files in the .packlist
 
 ; Thanks to alnewkirk on #perl-help channel
 ; http://pastie.org/8443394
-; usage: profile::utility::cpan { 'Dancer': using => 'cpanm', module => 'Dancer' }
-; cpan dependency installation
+
+    usage: 
+
+    profile::utility::cpan { 'Dancer':
+        using => 'cpanm',
+        module => 'Dancer'
+    }
+
+    # cpan dependency installation
 
     define profile::utility::cpan (
         $using  = 'cpan',
