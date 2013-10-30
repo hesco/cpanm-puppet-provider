@@ -49,6 +49,17 @@ would need to be extended to account for all of that.
 In a #perl-help conversation, ilmari asserts that cpanm 
 is a module installation tool, not a real package manager.  
 
+- Wednesday October 30 2013, 01:20:14 PM -
+
+hesco: Any other puppet using perl developers out there frustrated 
+by the lack of a native cpanm provider for package resources in puppet?  
+I just ordered "Puppet Types and Providers".  Should be here in two weeks.  
+I'm thinking it would be nice to contribute back a new provider to the 
+puppet code base to serve our needs as perl developers and as sysadmins 
+who have to manage perl code bases.  I would love to collaborate with 
+others on such a project.  If interested, please drop me a line at: 
+hesco@campaignfoundations.com .  Thanks. 
+
 ilmari_: perl has no package manager, so it's hard 
 for puppet to drive it
 
@@ -72,6 +83,29 @@ hesco: Is there any perl native means for uninstalling a
 package short of rm -rf on it?
 
 ilmari_: rm the files in the .packlist
+
+- 04:01:35 PM -
+
+alnewkirk: hesco: 
+    https://metacpan.org/pod/release/XAICRON/App-pmuninstall-0.30/bin/pm-uninstall
+
+hesco: Thanks alnewkirk: will check that out
+
+hesco: very nice interface.  Have you tested its use?
+
+hesco: I'll add this to the README and plan to test this.  
+
+hesco: If its working through the MANIFEST in the .packlist as ilmari_ suggested 
+and we can sort out how to permit the query of installed packages we start to 
+approximate minimal package manager functionality and perhaps can package up 
+something to serve that purpose  on the perl side for perl system admins; which 
+can then be wrapped as a puppet provider.  This is encouraging.
+
+hesco: alnewkirk: quick skim of this is quite encouraging:
+https://github.com/xaicron/pm-uninstall/blob/master/lib/App/pmuninstall.pm  
+
+hesco: it seems to include methods useful for package query functions
+as well 
 
 ; Thanks to alnewkirk on #perl-help channel
 ; http://pastie.org/8443394
