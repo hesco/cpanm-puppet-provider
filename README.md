@@ -107,6 +107,40 @@ https://github.com/xaicron/pm-uninstall/blob/master/lib/App/pmuninstall.pm
 hesco: it seems to include methods useful for package query functions
 as well 
 
+Further on the question of querying an installation about its installed 
+packages, this evening I finally removed perlbrew and installed plenv, 
+an item which has been on my to-do list for several months now.  
+
+plenv list-modules 
+
+will provide a list of modules installed in the current perl
+installation.  To that functionality I would want to add a 
+means for querying for: 
+
+module version              # $VERSION of installed module
+module version-latest       # latest version available upstream
+module installation path    # absolute path to installation 
+module packlist-path        # absolute path to .packlist
+module deps                 # dependencies on perl modules 
+module deps-external        # dependencies on non perl resources 
+module deps-testing         # dependencies used for testing
+module deps-build           # dependenccies used for building module
+module provides-commands    # what cli tools are provided 
+module provides-modules     # what modules are provided 
+module provides-methods     # what public methods are exposed
+module provides-functions   # what public functions are exposed
+module author               # principal author(s)
+module maintainer           # and their contact information 
+module release-date         # for the current version
+module cpan-url             # what it says 
+module metacpan-url         # self-explanatory
+module test-results         # url to published smoke test results
+module repo                 # url for a publically accessible vcs repository
+module issues               # open bug count and 
+                            # preferred means for issue tracking
+module irc                  # server and channels supporting 
+                            # module users or development
+
 ; Thanks to alnewkirk on #perl-help channel
 ; http://pastie.org/8443394
 
