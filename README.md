@@ -168,3 +168,17 @@ means for querying for:
 I have already started adapting this in my own puppet manifests 
 to use cpanm and locallib
 
+Although I have not yet tested this, and it seems (with the exception 
+of a single script) to come without documentation, it also seems like 
+a useful building block for what I have in mind:
+
+	https://github.com/DrHyde/CPANdeps
+
+Without any meaningful code review, and on first glance, this project 
+appears to provide a web front end to a database of perl dependencies 
+built by the scripts it provides.  But I suspect that were we to disentangle 
+the user interface from the underlying functionality, that it might 
+prove useful.  24pullrequests.com reports of this project: "Given a module 
+name, this service will show you its dependencies along with a summary of 
+their test results from the CPAN testers."
+
